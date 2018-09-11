@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.ai.xiaocai.TestActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startServer"
+        android:text="启动服务"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+
+
+    <Button
+        android:visibility="gone"
+        android:onClick="startTranslate"
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPEAK" />
+
+    <Button
+        android:visibility="gone"
+        android:onClick="stopTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="END" />
+
+    <Button
+        android:onClick="pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中断对话" />
+
+    <Button
+        android:visibility="gone"
+        android:onClick="sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SLEEP" />
+
+    <Button
+        android:onClick="fmMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电台" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopServer"
+        android:text="停止服务"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendTXT"
+        android:text="TXT"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="202dp" />
+</LinearLayout>

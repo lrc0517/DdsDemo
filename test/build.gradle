@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 27
+
+    signingConfigs {
+        pro {
+            keyAlias 'keymorui'
+            keyPassword 'mr.123'
+            storeFile file('E:/APKSIGN/mrsign.jks')
+            storePassword 'mr.123'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.example.testai"
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.pro
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26+'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+}

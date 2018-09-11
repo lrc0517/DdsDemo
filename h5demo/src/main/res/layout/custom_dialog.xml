@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@null"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_guide">
+
+        <RelativeLayout
+            android:id="@+id/main_web_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_above="@+id/input_field"
+            android:background="#00000000"/>
+
+
+        <com.aispeech.ddsdemo.widget.InputField_
+            android:id="@+id/input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.hanks.htextview.typer.TyperTextView
+        android:id="@+id/ttv_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:clickable="true"
+        android:gravity="center|top"
+        android:keepScreenOn="true"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        app:charIncrease="1"
+        app:typerSpeed="50" />
+
+</RelativeLayout>
